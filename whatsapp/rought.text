@@ -1,0 +1,77 @@
+ const { name, number } = route.params;
+  const [inputdata, setinputdata] = useState();
+  const dispatch = useDispatch();
+  const [currentColor, setCurrentColor] = useState("#5DFF17");
+ const finaldata=useSelector((state)=>state.Home.chatdata)
+console.log(finaldata)
+const [messages, setMessages] = useState([]);
+/*{
+                
+  finaldata.map((item,i)=>{
+    
+    if(item.name===undefined){
+      
+    }else{
+      if(item.person===name){
+        return(
+<Text style={styles.leftchat} key={i}>
+{item.name}
+</Text>  
+)
+
+      }else{
+        return;
+      }
+      
+    }
+  })
+}*/
+
+
+ <KeyboardAvoidingView enabled>
+        <View style={styles.container}>
+          <View style={styles.chatbox}>
+            <ScrollView>
+         
+    
+
+              <Text style={styles.rightchat}>
+            right
+              </Text>
+            </ScrollView>
+            <View style={styles.inputtext} >
+              <TextInput
+                onChangeText={(text) => setinputdata(text)}
+             
+                value={inputdata}
+                multiline={true}
+             
+                style={styles.inputs}
+              ></TextInput>
+              <TouchableOpacity
+                onPress={() => {
+                  if(inputdata===''){
+                    setCurrentColor("red")
+                    setInterval(() => {
+                      setCurrentColor("#5DFF17")
+                      
+                    },100);
+                    
+                    
+
+                  }else{
+                    setinputdata("")
+                    dispatch(Chatdata({name:inputdata,person:name}));
+
+                  }
+                }}
+                
+                
+                style={{...styles.send,borderColor:currentColor}}
+              >
+                <Text>Send</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </KeyboardAvoidingView>

@@ -1,0 +1,26 @@
+
+        <View style={{
+          height: "45%", width: "100%",
+          fontWeight: 100, color: "white"
+  
+          , backgroundColor: "rgb(115, 215, 255)", marginTop: 3, marginBottom: 7
+        }}>
+          <Image
+            style={{ borderRadius: 4, width: "100%" }}
+            source={require("../b1.jpg")} onPress={()=>{'form',{choice:"./b1.jpg",active:true}}} />
+        
+          <ScrollView>
+  
+            <View style={{ height: "40%", width: "100%" }}>
+  
+              <Text style={{ color: "white" }} >The Noire Élégance’s figure is covered in black exposed carbon, while the Caractère wheels show the calipers finished in black. The dark shade of the car’s body is underlined by the C-shaped BUGATTI line, which is finished in matte polished aluminum. Black carbon and polished aluminum can also be found on other exterior components such as the rearview mirror and engine cover.
+  
+                The interior is entirely dominated by black, with the inner signature line in aluminum with a silk-matte finish being the only exception. “Noire” inscriptions adorn the side panels, the underside of the rear wing, the door sills, the outside of the center console, and the headrests.
+  
+                Every element of the Noire Élégance spells out its exclusivity.
+              </Text>
+  
+            </View>
+          </ScrollView>
+        </View>
+  

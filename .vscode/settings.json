@@ -1,0 +1,6 @@
+{
+    "C_Cpp.errorSquiggles": "Enabled",
+    "errorLens.removeLinebreaks": false,
+    "errorLens.enabled": false,
+    "code-runner.runInTerminal": true
+}
